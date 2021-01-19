@@ -1,0 +1,36 @@
+{
+  "name": "heimanba",
+  "version": "0.0.1",
+  "dependencies": {
+    "@serverless-devs/s-core": "^0.0.22"
+  },
+  "devDependencies": {
+    "@types/eslint": "^7.2.6",
+    "@types/jest": "^26.0.10",
+    "@types/node": "14",
+    "f2elint": "^0.4.4",
+    "jest": "^26.4.0",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^26.2.0",
+    "typescript": "^3.9.0"
+  },
+  "scripts": {
+    "dev": "npx tsc -w -p tsconfig.json",
+    "prebuild": "rimraf dist",
+    "build": "npx tsc -p tsconfig.json",
+    "test": "jest",
+    "test:cov": "jest --coverage",
+    "lint": "f2elint scan",
+    "fix": "f2elint fix",
+    "typecheck": "npx tsc -p tsconfig.json --noEmit"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "f2elint exec commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "f2elint exec lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts}": "f2elint exec eslint"
+  }
+}
