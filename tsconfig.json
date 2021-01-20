@@ -5,5 +5,5 @@
     "outDir": "dist",
     "resolveJsonModule": true
   },
-  "exclude": ["test", "node_modules", "test/fixtures/**/*.*", "template/**/*.*"]
+  "exclude": ["node_modules"]
 }

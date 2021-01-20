@@ -22,6 +22,7 @@
     "prebuild": "rimraf dist",
     "build": "npx tsc -p tsconfig.json",
     "build:component": "npx webpack",
+    "publish": "npm run build:component && s platform publish",
     "test": "jest",
     "test:cov": "jest --coverage",
     "lint": "f2elint scan",
@@ -36,5 +37,9 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,ts}": "f2elint exec eslint"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
   }
 }
