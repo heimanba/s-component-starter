@@ -2,7 +2,7 @@ Type: Component
 Name: component-stater
 Provider:
   - Alibaba
-Version: 0.0.2
+Version: 0.0.3
 Description: component标准组件starter
 HomePage: https://www.aliyun.com/
 Tags: #标签详情

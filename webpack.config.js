@@ -5,7 +5,7 @@ module.exports = {
   target: 'node',
   mode: 'development',
   entry: './src/index.ts',
-  devtool: 'cheap-module-source-map',
+  devtool: 'none',
   module: {
     rules: [
       {
